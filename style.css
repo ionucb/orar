@@ -637,18 +637,24 @@ main {
 
   display: grid;
 
-  grid-template-columns:
-    76px minmax(0, 1fr);
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
 
-  gap: 14px;
+  gap: 6px;
 
-  min-height: 104px;
+  min-height: 0;
 }
 
 
 .time-label {
 
-  padding-top: 13px;
+  grid-column: 1;
+  grid-row: 1;
+
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
 
   color:
     var(--muted-soft);
@@ -657,17 +663,17 @@ main {
     var(--font-mono);
 
   font-size: 11.5px;
+  font-weight: 600;
 
   font-variant-numeric:
     tabular-nums;
 
-  text-align: right;
+  text-align: center;
 
   white-space: nowrap;
 
-  line-height: 1.5;
+  line-height: 1.2;
 }
-
 
 /* =========================================================
    TIME TRACK
@@ -944,7 +950,7 @@ footer {
 
 
 /* =========================================================
-   MOBILE — DESIGN UNIVERSAL
+   MOBILE
 ========================================================= */
 
 @media (max-width: 700px) {
@@ -960,7 +966,9 @@ footer {
   main {
     width: calc(100% - 24px);
     max-width: 520px;
-    margin: 12px auto 28px;
+
+    margin:
+      12px auto 28px;
   }
 
 
@@ -969,6 +977,7 @@ footer {
   ======================================================= */
 
   .topbar {
+
     position: sticky;
     top: 0;
     z-index: 20;
@@ -977,7 +986,8 @@ footer {
     align-items: center;
     justify-content: space-between;
 
-    padding: 13px 14px;
+    padding:
+      13px 14px;
 
     gap: 12px;
   }
@@ -987,22 +997,28 @@ footer {
   }
 
   .eyebrow {
-    margin: 0 0 3px;
+
+    margin:
+      0 0 3px;
 
     font-size: 8px;
+
     letter-spacing: .1em;
 
     white-space: nowrap;
   }
 
   h1 {
+
     margin: 0;
 
     font-size: 22px;
+
     line-height: 1.05;
   }
 
   .date-box {
+
     flex: 0 0 auto;
 
     max-width: 150px;
@@ -1011,20 +1027,24 @@ footer {
   }
 
   .date-box span {
+
     display: block;
 
     font-size: 9px;
+
     line-height: 1.2;
 
     white-space: nowrap;
   }
 
   .date-box strong {
+
     display: block;
 
     margin-top: 3px;
 
     font-size: 10px;
+
     line-height: 1.2;
 
     white-space: nowrap;
@@ -1036,22 +1056,27 @@ footer {
   ======================================================= */
 
   .now-card {
+
     margin-bottom: 12px;
 
     border-radius: 14px;
   }
 
   .now-status {
-    padding: 9px 12px;
+
+    padding:
+      9px 12px;
 
     font-size: 9px;
   }
 
   .now-content {
+
     padding: 13px;
   }
 
   .now-main {
+
     display: flex;
     flex-direction: column;
 
@@ -1059,33 +1084,43 @@ footer {
   }
 
   .now-subject {
-    margin: 2px 0 5px;
+
+    margin:
+      2px 0 5px;
 
     font-size: 20px;
+
     line-height: 1.1;
   }
 
   .now-meta {
+
     font-size: 11.5px;
+
     line-height: 1.45;
   }
 
   .now-time {
+
     margin-top: 2px;
+
     padding-top: 9px;
 
-    border-top: 1px solid var(--line);
+    border-top:
+      1px solid var(--line);
 
     text-align: left;
   }
 
   .now-time strong {
+
     display: block;
 
     font-size: 15px;
   }
 
   .now-time span {
+
     display: block;
 
     margin-top: 2px;
@@ -1099,21 +1134,28 @@ footer {
   ======================================================= */
 
   .controls {
+
     display: grid;
 
-    grid-template-columns: 44px minmax(0, 1fr) 44px;
+    grid-template-columns:
+      44px minmax(0, 1fr) 44px;
 
     gap: 7px;
 
-    margin: 12px 0 18px;
+    margin:
+      12px 0 18px;
   }
 
   .controls button {
+
     width: 100%;
+
     min-width: 0;
+
     height: 42px;
 
-    padding: 0 8px;
+    padding:
+      0 8px;
 
     border-radius: 11px;
 
@@ -1121,6 +1163,7 @@ footer {
   }
 
   .controls .today-btn {
+
     min-width: 0;
 
     font-weight: 600;
@@ -1130,83 +1173,144 @@ footer {
   /* =======================================================
      ZIUA SELECTATĂ
   ======================================================= */
+.day-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  .day-heading {
-    display: flex;
-    flex-direction: row;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
 
-    align-items: flex-end;
-    justify-content: space-between;
+  border-bottom: 1px solid var(--line);
 
-    gap: 10px;
+  text-align: center;
+}
 
-    margin-bottom: 10px;
-    padding-bottom: 9px;
-  }
+.day-heading > div {
+  display: flex;
+  flex-direction: column;
 
-  .muted {
-    font-size: 10px;
-  }
+  align-items: center;
+  justify-content: center;
 
-  .day-heading h2 {
-    margin: 2px 0 0;
+  gap: 4px;
 
-    font-size: 23px;
-    line-height: 1;
-  }
+  width: 100%;
+}
 
-  .legend {
-    display: flex;
-    flex-direction: column;
+.muted {
+  display: block;
 
-    align-items: flex-end;
+  color: var(--muted);
 
-    gap: 3px;
+  font-size: 12px;
 
-    font-size: 9px;
-  }
+  line-height: 1.2;
 
+  text-transform: capitalize;
+}
+
+.day-heading h2 {
+  margin: 0;
+
+  font-family: var(--font-display);
+
+  font-weight: 600;
+
+  font-size: 23px;
+
+  line-height: 1;
+
+  letter-spacing: -.01em;
+}
 
   /* =======================================================
      ORAR
   ======================================================= */
 
   .schedule {
+
     display: flex;
+
     flex-direction: column;
 
-    gap: 6px;
+    gap: 7px;
   }
 
 
   /* =======================================================
      INTERVAL
+     ORA DEASUPRA CARDULUI
   ======================================================= */
 
-  .time-row {
-    display: grid;
+ /* =========================================================
+   ORA DEASUPRA CARDULUI - DESKTOP + MOBILE
+========================================================= */
 
-    grid-template-columns: 50px minmax(0, 1fr);
+.time-row {
+  display: grid !important;
 
-    gap: 7px;
+  grid-template-columns: 1fr !important;
+  grid-template-rows: auto 1fr !important;
 
-    min-height: 88px;
-  }
+  gap: 6px !important;
 
-  .time-label {
-    padding-top: 10px;
+  min-height: 0 !important;
+}
 
-    font-size: 8px;
-    line-height: 1.35;
 
-    text-align: right;
-  }
+.time-label {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+
+  width: 100% !important;
+
+  padding: 0 !important;
+  margin: 0 !important;
+
+  color: var(--muted-soft);
+
+  font-family: var(--font-mono);
+
+  font-size: 11.5px;
+
+  font-weight: 600;
+
+  font-variant-numeric: tabular-nums;
+
+  text-align: center !important;
+
+  white-space: nowrap;
+
+  line-height: 1.2;
+}
+
+
+.time-track {
+  grid-column: 1 !important;
+  grid-row: 2 !important;
+
+  width: 100% !important;
+
+  min-width: 0 !important;
+  min-height: 104px;
+}
+
+  /* =======================================================
+     CARD
+  ======================================================= */
 
   .time-track {
-    min-width: 0;
-    min-height: 88px;
 
-    border-radius: 11px;
+    order: 2;
+
+    width: 100%;
+
+    min-width: 0;
+
+    min-height: 100px;
+
+    border-radius: 12px;
   }
 
 
@@ -1215,58 +1319,87 @@ footer {
   ======================================================= */
 
   .lesson {
+
     position: relative;
 
     display: flex;
+
     align-items: center;
+    justify-content: center;
 
     min-height: 100%;
 
     margin: 4px;
 
-    padding: 9px 10px;
+    padding:
+      14px 16px;
 
-    border-radius: 9px;
+    border-radius: 10px;
+
+    text-align: center;
   }
 
   .lesson:hover {
+
     transform: none;
+
     box-shadow: none;
   }
 
   .lesson > div {
-    min-width: 0;
+
     width: 100%;
+
+    min-width: 0;
   }
 
   .lesson-type {
-    margin-bottom: 2px;
 
-    font-size: 7.5px;
+    margin-bottom: 5px;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
     line-height: 1.1;
 
     letter-spacing: .08em;
   }
 
   .lesson-subject {
-    margin: 0 0 5px;
 
-    font-size: 14px;
-    line-height: 1.1;
+    margin:
+      0 0 7px;
+
+    font-size: 18px;
+
+    line-height: 1.15;
   }
 
   .lesson-details {
+
     display: flex;
+
+    justify-content: center;
+    align-items: center;
+
     flex-direction: column;
 
-    gap: 2px;
+    gap: 3px;
 
-    font-size: 9.5px;
-    line-height: 1.3;
+    color:
+      #4a453e;
+
+    font-size: 11.5px;
+
+    line-height: 1.35;
   }
 
   .lesson-details span {
+
     display: block;
+
+    max-width: 100%;
 
     min-width: 0;
 
@@ -1278,6 +1411,7 @@ footer {
   }
 
   .lesson-parity {
+
     display: none;
   }
 
@@ -1287,8 +1421,7 @@ footer {
   ======================================================= */
 
   .lesson.current {
-    /* păstrează stilul existent pentru current,
-       dar fără să mărească elementul pe telefon */
+
     transform: none;
   }
 
@@ -1298,16 +1431,22 @@ footer {
   ======================================================= */
 
   .free {
+
     display: flex;
+
     align-items: center;
+    justify-content: center;
 
     height: 100%;
 
-    padding: 0 10px;
+    padding:
+      0 10px;
 
-    font-size: 9.5px;
+    font-size: 11px;
 
     font-style: italic;
+
+    text-align: center;
   }
 
 
@@ -1316,7 +1455,9 @@ footer {
   ======================================================= */
 
   .weekend-card {
-    padding: 20px 14px;
+
+    padding:
+      20px 14px;
 
     border-radius: 12px;
 
@@ -1331,9 +1472,12 @@ footer {
   ======================================================= */
 
   footer {
-    width: calc(100% - 24px);
 
-    margin: 0 auto 20px;
+    width:
+      calc(100% - 24px);
+
+    margin:
+      0 auto 20px;
 
     font-size: 8px;
   }
@@ -1347,119 +1491,171 @@ footer {
 @media (max-width: 480px) {
 
   main {
-    width: calc(100% - 18px);
+
+    width:
+      calc(100% - 18px);
+
     margin-top: 9px;
   }
 
   .topbar {
-    padding: 11px 12px;
+
+    padding:
+      11px 12px;
   }
 
   .eyebrow {
+
     font-size: 7px;
   }
 
   h1 {
+
     font-size: 20px;
   }
 
   .date-box {
+
     max-width: 130px;
   }
 
   .date-box span {
+
     font-size: 8px;
   }
 
   .date-box strong {
+
     font-size: 9.5px;
   }
 
 
-  /* NOW */
+  /* =======================================================
+     NOW
+  ======================================================= */
 
   .now-content {
+
     padding: 11px;
   }
 
   .now-subject {
+
     font-size: 19px;
   }
 
   .now-meta {
+
     font-size: 10.5px;
   }
 
   .now-time strong {
+
     font-size: 14px;
   }
 
 
-  /* CONTROLS */
+  /* =======================================================
+     CONTROLS
+  ======================================================= */
 
   .controls {
-    grid-template-columns: 42px minmax(0, 1fr) 42px;
+
+    grid-template-columns:
+      42px minmax(0, 1fr) 42px;
+
     gap: 6px;
   }
 
   .controls button {
+
     height: 40px;
 
     font-size: 12px;
   }
 
 
-  /* DAY */
+  /* =======================================================
+     DAY
+  ======================================================= */
+
+  .day-heading > div {
+
+    gap: 7px;
+  }
+
+  .muted {
+
+    font-size: 11px;
+  }
 
   .day-heading h2 {
+
     font-size: 21px;
   }
 
-  .legend {
-    font-size: 8px;
-  }
 
-
-  /* SCHEDULE */
+  /* =======================================================
+     SCHEDULE
+  ======================================================= */
 
   .time-row {
-    grid-template-columns: 44px minmax(0, 1fr);
 
-    gap: 6px;
-
-    min-height: 84px;
-  }
-
-  .time-track {
-    min-height: 84px;
+    gap: 4px;
   }
 
   .time-label {
-    padding-top: 8px;
 
-    font-size: 7.5px;
+    font-size: 9px;
   }
 
+  .time-track {
+
+    min-height: 94px;
+  }
+
+
+  /* =======================================================
+     LESSON
+  ======================================================= */
+
   .lesson {
+
     margin: 3px;
 
-    padding: 8px 9px;
+    padding:
+      12px 10px;
+  }
+
+  .lesson-type {
+
+    font-size: 8px;
   }
 
   .lesson-subject {
-    font-size: 13px;
+
+    font-size: 16px;
   }
 
   .lesson-details {
-    font-size: 9px;
+
+    font-size: 10.5px;
   }
 
   .free {
-    font-size: 9px;
+
+    font-size: 10px;
   }
 
+
+  /* =======================================================
+     FOOTER
+  ======================================================= */
+
   footer {
-    width: calc(100% - 18px);
+
+    width:
+      calc(100% - 18px);
 
     flex-direction: column;
 
@@ -1475,64 +1671,127 @@ footer {
 @media (max-width: 360px) {
 
   .topbar {
+
     padding: 10px;
   }
 
   h1 {
+
     font-size: 19px;
   }
 
   .date-box {
+
     max-width: 110px;
   }
 
   .date-box span {
+
     font-size: 7.5px;
   }
 
   .date-box strong {
+
     font-size: 9px;
   }
 
   main {
-    width: calc(100% - 12px);
+
+    width:
+      calc(100% - 12px);
   }
 
+
+  /* =======================================================
+     CONTROLS
+  ======================================================= */
+
   .controls {
-    grid-template-columns: 40px minmax(0, 1fr) 40px;
+
+    grid-template-columns:
+      40px minmax(0, 1fr) 40px;
+
     gap: 5px;
   }
 
   .controls button {
+
     height: 39px;
-    padding: 0 5px;
+
+    padding:
+      0 5px;
   }
+
+
+  /* =======================================================
+     DAY
+  ======================================================= */
+
+  .day-heading > div {
+
+    gap: 6px;
+  }
+
+  .muted {
+
+    font-size: 10px;
+  }
+
+  .day-heading h2 {
+
+    font-size: 20px;
+  }
+
+
+  /* =======================================================
+     SCHEDULE
+  ======================================================= */
 
   .time-row {
-    grid-template-columns: 41px minmax(0, 1fr);
-    gap: 5px;
 
-    min-height: 80px;
-  }
-
-  .time-track {
-    min-height: 80px;
+    gap: 4px;
   }
 
   .time-label {
-    font-size: 7px;
+
+    font-size: 8.5px;
   }
 
+  .time-track {
+
+    min-height: 90px;
+  }
+
+
+  /* =======================================================
+     LESSON
+  ======================================================= */
+
   .lesson {
+
     margin: 3px;
-    padding: 7px 8px;
+
+    padding:
+      10px 8px;
+  }
+
+  .lesson-type {
+
+    font-size: 7.5px;
   }
 
   .lesson-subject {
-    font-size: 12px;
+
+    font-size: 15px;
   }
 
   .lesson-details {
-    font-size: 8.5px;
+
+    font-size: 10px;
+  }
+
+  .free {
+
+    font-size: 9.5px;
   }
 }

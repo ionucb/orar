@@ -674,10 +674,8 @@ function renderSchedule() {
           <div class="time-row">
 
             <div class="time-label">
-              ${start}<br>
-              ↓<br>
-              ${end}
-            </div>
+  ${start} → ${end}
+</div>
 
             <div class="time-track">
 
@@ -720,10 +718,8 @@ function renderSchedule() {
           <div class="time-row">
 
             <div class="time-label">
-              ${start}<br>
-              ↓<br>
-              ${end}
-            </div>
+  ${start} → ${end}
+</div>
 
             <div class="time-track">
 
@@ -751,11 +747,9 @@ function renderSchedule() {
       rows.push(`
         <div class="time-row">
 
-          <div class="time-label">
-            ${start}<br>
-            ↓<br>
-            ${end}
-          </div>
+<div class="time-label">
+  ${start} → ${end}
+</div>
 
           <div class="time-track">
 
