@@ -84,12 +84,8 @@
 
 
 :focus-visible {
-
-  outline:
-    2px solid var(--odd);
-
+  outline: 2px solid var(--odd);
   outline-offset: 2px;
-
   border-radius: 6px;
 }
 
@@ -107,20 +103,13 @@ body {
 
   margin: 0;
 
-  background:
-    var(--bg);
+  background: var(--bg);
+  color: var(--text);
 
-  color:
-    var(--text);
+  font-family: var(--font-body);
 
-  font-family:
-    var(--font-body);
-
-  -webkit-font-smoothing:
-    antialiased;
-
-  text-rendering:
-    optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 
@@ -142,15 +131,11 @@ button {
 .topbar {
 
   position: sticky;
-
   top: 0;
-
   z-index: 10;
 
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
 
   gap: 20px;
@@ -162,11 +147,8 @@ button {
   background:
     rgba(246, 244, 239, .88);
 
-  backdrop-filter:
-    blur(14px);
-
-  -webkit-backdrop-filter:
-    blur(14px);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 
   border-bottom:
     1px solid var(--line);
@@ -175,21 +157,15 @@ button {
 
 .eyebrow {
 
-  margin:
-    0 0 5px;
+  margin: 0 0 5px;
 
-  color:
-    var(--muted);
+  color: var(--muted);
 
   font-size: 11px;
-
   font-weight: 600;
 
-  letter-spacing:
-    .14em;
-
-  text-transform:
-    uppercase;
+  letter-spacing: .14em;
+  text-transform: uppercase;
 }
 
 
@@ -205,19 +181,16 @@ h1 {
 
   margin-bottom: 0;
 
-  font-family:
-    var(--font-display);
+  font-family: var(--font-display);
 
   font-weight: 600;
 
   font-size:
     clamp(24px, 3.6vw, 34px);
 
-  line-height:
-    1.05;
+  line-height: 1.05;
 
-  letter-spacing:
-    -.01em;
+  letter-spacing: -.01em;
 }
 
 
@@ -238,14 +211,11 @@ h1 {
 
 .date-box span {
 
-  color:
-    var(--muted);
+  color: var(--muted);
 
-  font-size:
-    12.5px;
+  font-size: 12.5px;
 
-  text-transform:
-    capitalize;
+  text-transform: capitalize;
 }
 
 
@@ -253,17 +223,12 @@ h1 {
 
   margin-top: 4px;
 
-  color:
-    var(--text);
+  color: var(--text);
 
-  font-size:
-    14px;
+  font-size: 14px;
+  font-weight: 600;
 
-  font-weight:
-    600;
-
-  font-variant-numeric:
-    tabular-nums;
+  font-variant-numeric: tabular-nums;
 }
 
 
@@ -294,8 +259,7 @@ main {
   border:
     1px solid var(--line);
 
-  border-radius:
-    18px;
+  border-radius: 18px;
 
   background:
     var(--surface);
@@ -311,7 +275,6 @@ main {
 .now-status {
 
   display: flex;
-
   align-items: center;
 
   gap: 9px;
@@ -322,33 +285,23 @@ main {
   border-bottom:
     1px solid var(--line);
 
-  color:
-    var(--muted);
+  color: var(--muted);
 
-  font-size:
-    11px;
+  font-size: 11px;
+  font-weight: 700;
 
-  font-weight:
-    700;
-
-  letter-spacing:
-    .1em;
+  letter-spacing: .1em;
 }
 
 
 .pulse {
 
-  flex:
-    0 0 auto;
+  flex: 0 0 auto;
 
-  width:
-    8px;
+  width: 8px;
+  height: 8px;
 
-  height:
-    8px;
-
-  border-radius:
-    50%;
+  border-radius: 50%;
 
   background:
     var(--green);
@@ -384,37 +337,30 @@ main {
   font-family:
     var(--font-display);
 
-  font-weight:
-    600;
+  font-weight: 600;
 
   font-size:
     clamp(22px, 4vw, 30px);
 
-  line-height:
-    1.1;
+  line-height: 1.1;
 
-  letter-spacing:
-    -.01em;
+  letter-spacing: -.01em;
 }
 
 
 .now-meta {
 
-  color:
-    var(--muted);
+  color: var(--muted);
 
-  font-size:
-    14.5px;
+  font-size: 14.5px;
 
-  line-height:
-    1.75;
+  line-height: 1.75;
 }
 
 
 .now-time {
 
-  text-align:
-    right;
+  text-align: right;
 
   font-variant-numeric:
     tabular-nums;
@@ -423,49 +369,37 @@ main {
 
 .now-time strong {
 
-  display:
-    block;
+  display: block;
 
   font-family:
     var(--font-mono);
 
-  font-size:
-    19px;
+  font-size: 19px;
 
-  letter-spacing:
-    -.01em;
+  letter-spacing: -.01em;
 }
 
 
 .now-time span {
 
-  color:
-    var(--muted);
+  color: var(--muted);
 
-  font-size:
-    12.5px;
+  font-size: 12.5px;
 }
 
 
 .now-empty {
 
-  display:
-    flex;
+  display: flex;
+  align-items: center;
 
-  align-items:
-    center;
+  gap: 10px;
 
-  gap:
-    10px;
+  color: var(--muted);
 
-  color:
-    var(--muted);
+  font-size: 15.5px;
 
-  font-size:
-    15.5px;
-
-  line-height:
-    1.5;
+  line-height: 1.5;
 }
 
 
@@ -475,11 +409,9 @@ main {
 
 .now-progress {
 
-  height:
-    3px;
+  height: 3px;
 
-  overflow:
-    hidden;
+  overflow: hidden;
 
   background:
     var(--surface-2);
@@ -488,8 +420,7 @@ main {
 
 .now-progress-fill {
 
-  height:
-    100%;
+  height: 100%;
 
   background:
     var(--green);
@@ -505,17 +436,11 @@ main {
 
 .controls {
 
-  display:
-    flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  justify-content:
-    center;
-
-  align-items:
-    center;
-
-  gap:
-    10px;
+  gap: 10px;
 
   margin:
     18px 0 26px;
@@ -524,11 +449,8 @@ main {
 
 .controls button {
 
-  min-width:
-    40px;
-
-  height:
-    40px;
+  min-width: 40px;
+  height: 40px;
 
   padding:
     0 16px;
@@ -536,8 +458,7 @@ main {
   border:
     1px solid var(--line);
 
-  border-radius:
-    10px;
+  border-radius: 10px;
 
   background:
     var(--surface);
@@ -545,17 +466,12 @@ main {
   color:
     var(--text);
 
-  font:
-    inherit;
+  font: inherit;
 
-  font-weight:
-    600;
+  font-weight: 600;
+  font-size: 14px;
 
-  font-size:
-    14px;
-
-  cursor:
-    pointer;
+  cursor: pointer;
 
   transition:
     border-color .15s var(--ease),
@@ -575,14 +491,12 @@ main {
 
 
 .controls button:active {
-  transform:
-    scale(.96);
+  transform: scale(.96);
 }
 
 
 .controls .today-btn {
-  min-width:
-    92px;
+  min-width: 92px;
 }
 
 
@@ -592,48 +506,18 @@ main {
 
 .day-heading {
 
-  display:
-    flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
 
-  justify-content:
-    center;
+  gap: 20px;
 
-  align-items:
-    center;
+  margin-bottom: 14px;
 
-  gap:
-    20px;
-
-  margin-bottom:
-    14px;
-
-  padding-bottom:
-    12px;
+  padding-bottom: 12px;
 
   border-bottom:
     1px solid var(--line);
-
-  text-align:
-    center;
-}
-
-
-.day-heading > div {
-
-  display:
-    flex;
-
-  flex-direction:
-    column;
-
-  align-items:
-    center;
-
-  justify-content:
-    center;
-
-  gap:
-    4px;
 }
 
 
@@ -642,36 +526,27 @@ main {
   color:
     var(--muted);
 
-  font-size:
-    12.5px;
+  font-size: 12.5px;
 
-  line-height:
-    1.2;
-
-  text-transform:
-    capitalize;
+  text-transform: capitalize;
 }
 
 
 .day-heading h2 {
 
   margin:
-    0;
+    2px 0 0;
 
   font-family:
     var(--font-display);
 
-  font-weight:
-    600;
+  font-weight: 600;
 
-  font-size:
-    26px;
+  font-size: 26px;
 
-  line-height:
-    1;
+  line-height: 1;
 
-  letter-spacing:
-    -.01em;
+  letter-spacing: -.01em;
 }
 
 
@@ -681,49 +556,35 @@ main {
 
 .legend {
 
-  display:
-    flex;
+  display: flex;
 
-  gap:
-    16px;
+  gap: 16px;
 
   color:
     var(--muted);
 
-  font-size:
-    11.5px;
-
-  font-weight:
-    600;
+  font-size: 11.5px;
+  font-weight: 600;
 }
 
 
 .legend span {
 
-  display:
-    flex;
+  display: flex;
+  align-items: center;
 
-  align-items:
-    center;
-
-  gap:
-    6px;
+  gap: 6px;
 }
 
 
 .dot {
 
-  display:
-    inline-block;
+  display: inline-block;
 
-  width:
-    8px;
+  width: 8px;
+  height: 8px;
 
-  height:
-    8px;
-
-  border-radius:
-    50%;
+  border-radius: 50%;
 }
 
 
@@ -745,14 +606,11 @@ main {
 
 .schedule {
 
-  display:
-    flex;
+  display: flex;
 
-  flex-direction:
-    column;
+  flex-direction: column;
 
-  gap:
-    8px;
+  gap: 8px;
 
   animation:
     fade-in .22s var(--ease);
@@ -762,34 +620,32 @@ main {
 @keyframes fade-in {
 
   from {
-
-    opacity:
-      0;
-
-    transform:
-      translateY(3px);
+    opacity: 0;
+    transform: translateY(3px);
   }
 
   to {
-
-    opacity:
-      1;
-
-    transform:
-      translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 
 /* =========================================================
    TIME ROW
-   ORA DEASUPRA CARDULUI
+
+   IMPORTANT:
+   Fiecare interval are:
+   1. ora sus
+   2. cardul dedesubt
+
+   Nu mai folosim cele doua randuri 1fr / 1px / 1fr
+   pentru lectiile par/impar.
 ========================================================= */
 
 .time-row {
 
-  display:
-    grid;
+  display: grid;
 
   grid-template-columns:
     1fr;
@@ -797,14 +653,9 @@ main {
   grid-template-rows:
     auto auto;
 
-  gap:
-    5px;
+  gap: 5px;
 
-  min-height:
-    0;
-
-  width:
-    100%;
+  min-height: 0;
 }
 
 
@@ -814,20 +665,13 @@ main {
 
 .time-label {
 
-  grid-column:
-    1;
+  grid-column: 1;
+  grid-row: 1;
 
-  grid-row:
-    1;
+  width: 100%;
 
-  width:
-    100%;
-
-  margin:
-    0;
-
-  padding:
-    0;
+  padding: 0;
+  margin: 0;
 
   color:
     var(--muted-soft);
@@ -835,117 +679,108 @@ main {
   font-family:
     var(--font-mono);
 
-  font-size:
-    11.5px;
-
-  font-weight:
-    600;
+  font-size: 11.5px;
+  font-weight: 600;
 
   font-variant-numeric:
     tabular-nums;
 
-  text-align:
-    center;
+  text-align: center;
 
-  white-space:
-    nowrap;
+  white-space: nowrap;
 
-  line-height:
-    1.2;
+  line-height: 1.2;
 }
 
 
 /* =========================================================
    TIME TRACK
+
+   CARDUL ARE O SINGURA INALTIME NORMALA.
 ========================================================= */
 
 .time-track {
 
-  position:
-    relative;
+  position: relative;
 
-  display:
-    grid;
+  display: flex;
 
-  grid-template-rows:
-    1fr 1px 1fr;
+  align-items: center;
 
-  grid-column:
-    1;
+  grid-column: 1;
+  grid-row: 2;
 
-  grid-row:
-    2;
+  width: 100%;
 
-  width:
-    100%;
+  min-width: 0;
 
-  min-width:
-    0;
-
-  min-height:
-    92px;
+  min-height: 86px;
 
   border:
     1px solid var(--line);
 
-  border-radius:
-    14px;
+  border-radius: 14px;
 
   background:
     var(--surface);
 
-  overflow:
-    hidden;
+  overflow: hidden;
 }
 
 
+/* =========================================================
+   DACA EXISTA LINIA DE PARITATE
+========================================================= */
+
 .parity-line {
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  top: 50%;
+
+  height: 1px;
+
   background:
     var(--line);
+
+  pointer-events: none;
 }
 
 
 /* =========================================================
    LESSON
+
+   PAR SI IMPAR AU EXACT ACEEASI DIMENSIUNE.
 ========================================================= */
 
 .lesson {
 
-  position:
-    relative;
+  position: relative;
 
-  display:
-    flex;
+  display: flex;
 
-  align-items:
-    center;
-
-  justify-content:
-    center;
+  align-items: center;
+  justify-content: center;
 
   width:
     calc(100% - 8px);
 
-  min-width:
-    0;
+  min-width: 0;
 
-  min-height:
-    78px;
+  height: 78px;
+  min-height: 78px;
 
-  height:
-    78px;
-
-  margin:
-    4px;
+  margin: 4px;
 
   padding:
     10px 12px;
 
-  border-radius:
-    10px;
+  border-radius: 10px;
 
-  text-align:
-    center;
+  text-align: center;
 
   transition:
     transform .15s var(--ease),
@@ -955,26 +790,22 @@ main {
 
 
 /* =========================================================
-   IMPAR + PAR
-   EXACT ACEEAȘI DIMENSIUNE
+   PAR + IMPAR
 ========================================================= */
 
 .lesson.odd,
 .lesson.even {
 
-  min-height:
-    78px;
+  height: 78px;
 
-  height:
-    78px;
+  min-height: 78px;
 
-  align-self:
-    center;
+  align-self: center;
 }
 
 
 /* =========================================================
-   IMPARĂ
+   IMPAR
 ========================================================= */
 
 .lesson.odd {
@@ -988,7 +819,7 @@ main {
 
 
 /* =========================================================
-   PARĂ
+   PAR
 ========================================================= */
 
 .lesson.even {
@@ -1002,28 +833,33 @@ main {
 
 
 /* =========================================================
-   TOATE SĂPTĂMÂNILE
+   TOATE SAPTAMANILE
+
+   Acestea pot fi mai inalte deoarece ocupa tot intervalul.
 ========================================================= */
 
 .lesson.all {
 
-  grid-row:
-    1 / 4;
+  width:
+    calc(100% - 8px);
+
+  height:
+    auto;
+
+  min-height:
+    78px;
+
+  margin:
+    4px;
 
   align-self:
-    stretch;
+    center;
 
   display:
     flex;
 
   align-items:
     center;
-
-  height:
-    auto;
-
-  min-height:
-    0;
 
   background:
     var(--green-soft);
@@ -1060,12 +896,12 @@ main {
 
 
 /* =========================================================
-   VARIANTA INACTIVĂ
+   INACTIV
 ========================================================= */
 
 .lesson.inactive {
-  opacity:
-    .45;
+
+  opacity: .45;
 }
 
 
@@ -1073,25 +909,27 @@ main {
    LESSON CONTENT
 ========================================================= */
 
+.lesson > div {
+
+  width: 100%;
+
+  min-width: 0;
+}
+
+
 .lesson-type {
 
-  margin-bottom:
-    3px;
+  margin-bottom: 3px;
 
   color:
     var(--muted);
 
-  font-size:
-    10px;
+  font-size: 10px;
+  font-weight: 700;
 
-  font-weight:
-    700;
+  letter-spacing: .08em;
 
-  letter-spacing:
-    .08em;
-
-  text-transform:
-    uppercase;
+  text-transform: uppercase;
 }
 
 
@@ -1103,27 +941,22 @@ main {
   font-family:
     var(--font-display);
 
-  font-weight:
-    600;
+  font-weight: 600;
 
-  font-size:
-    17px;
+  font-size: 17px;
 
-  line-height:
-    1.15;
+  line-height: 1.15;
 
-  letter-spacing:
-    -.005em;
+  letter-spacing: -.005em;
 }
 
 
 .lesson-details {
 
-  display:
-    flex;
+  display: flex;
+  flex-wrap: wrap;
 
-  flex-wrap:
-    wrap;
+  justify-content: center;
 
   gap:
     5px 14px;
@@ -1131,120 +964,51 @@ main {
   color:
     #4a453e;
 
-  font-size:
-    12.5px;
+  font-size: 12.5px;
 
-  line-height:
-    1.45;
+  line-height: 1.45;
 }
 
 
 .lesson-parity {
 
-  position:
-    absolute;
+  position: absolute;
 
-  top:
-    10px;
+  top: 10px;
+  right: 12px;
 
-  right:
-    12px;
+  font-size: 9px;
+  font-weight: 700;
 
-  font-size:
-    9px;
+  letter-spacing: .06em;
 
-  font-weight:
-    700;
+  text-transform: uppercase;
 
-  letter-spacing:
-    .06em;
-
-  text-transform:
-    uppercase;
-
-  opacity:
-    .55;
+  opacity: .55;
 }
 
 
 /* =========================================================
    FREE SLOT
-   SLOT COMPLET LIBER = MINIMAL
-========================================================= */
 
-.free {
-
-  display:
-    flex;
-
-  align-items:
-    center;
-
-  justify-content:
-    center;
-
-  width:
-    100%;
-
-  min-height:
-    30px;
-
-  height:
-    30px;
-
-  padding:
-    0 12px;
-
-  color:
-    var(--muted-soft);
-
-  font-size:
-    10.5px;
-
-  font-style:
-    italic;
-
-  line-height:
-    1;
-
-  text-align:
-    center;
-}
-
-
-/* =========================================================
-   TRACK PENTRU SLOT LIBER
+   SLOTUL LIBER ESTE MIC, NU ARE INALTIMEA UNEI LECTII.
 ========================================================= */
 
 .time-track:has(.free) {
 
-  display:
-    flex;
-
-  align-items:
-    center;
-
-  justify-content:
-    center;
-
   min-height:
     34px;
 
   height:
     34px;
 
-  border-radius:
-    10px;
+  display:
+    flex;
 
-  background:
-    transparent;
-
-  border:
-    1px dashed var(--line);
+  align-items:
+    center;
 }
 
-
-/* eliminăm spațiul inutil din interior */
 
 .time-track:has(.free) .free {
 
@@ -1255,10 +1019,7 @@ main {
     100%;
 
   min-height:
-    0;
-
-  margin:
-    0;
+    32px;
 
   padding:
     0 12px;
@@ -1267,7 +1028,7 @@ main {
     var(--muted-soft);
 
   font-size:
-    10.5px;
+    11px;
 
   font-style:
     italic;
@@ -1347,14 +1108,8 @@ footer {
 
 @media (max-width: 700px) {
 
-
-  /* =======================================================
-     GENERAL
-  ======================================================= */
-
   body {
-    font-size:
-      14px;
+    font-size: 14px;
   }
 
 
@@ -1377,14 +1132,11 @@ footer {
 
   .topbar {
 
-    position:
-      sticky;
+    position: sticky;
 
-    top:
-      0;
+    top: 0;
 
-    z-index:
-      20;
+    z-index: 20;
 
     display:
       flex;
@@ -1404,8 +1156,7 @@ footer {
 
 
   .brand {
-    min-width:
-      0;
+    min-width: 0;
   }
 
 
@@ -1592,7 +1343,7 @@ footer {
 
 
   /* =======================================================
-     NAVIGARE ZI
+     CONTROLS
   ======================================================= */
 
   .controls {
@@ -1644,7 +1395,7 @@ footer {
 
 
   /* =======================================================
-     ZIUA SELECTATĂ
+     ZIUA
   ======================================================= */
 
   .day-heading {
@@ -1754,7 +1505,6 @@ footer {
 
   /* =======================================================
      TIME ROW
-     ORA DEASUPRA CARDULUI
   ======================================================= */
 
   .time-row {
@@ -1777,7 +1527,7 @@ footer {
 
 
   /* =======================================================
-     TIME LABEL
+     ORA
   ======================================================= */
 
   .time-label {
@@ -1804,7 +1554,7 @@ footer {
       var(--font-mono);
 
     font-size:
-      11px;
+      11.5px;
 
     font-weight:
       600;
@@ -1853,7 +1603,21 @@ footer {
 
 
   /* =======================================================
-     CURS
+     SLOT LIBER
+  ======================================================= */
+
+  .time-track:has(.free) {
+
+    min-height:
+      32px;
+
+    height:
+      32px;
+  }
+
+
+  /* =======================================================
+     LESSON
   ======================================================= */
 
   .lesson {
@@ -1873,11 +1637,11 @@ footer {
     width:
       calc(100% - 6px);
 
-    min-height:
-      82px;
-
     height:
-      82px;
+      80px;
+
+    min-height:
+      80px;
 
     margin:
       3px;
@@ -1893,38 +1657,30 @@ footer {
   }
 
 
-  /* =======================================================
-     IMPAR + PAR
-  ======================================================= */
-
   .lesson.odd,
   .lesson.even {
 
-    min-height:
-      82px;
-
     height:
-      82px;
+      80px;
 
-    align-self:
-      center;
+    min-height:
+      80px;
   }
 
 
-  /* =======================================================
-     TOATE SĂPTĂMÂNILE
-  ======================================================= */
-
   .lesson.all {
+
+    width:
+      calc(100% - 6px);
 
     height:
       auto;
 
     min-height:
-      0;
+      80px;
 
-    align-self:
-      stretch;
+    margin:
+      3px;
   }
 
 
@@ -2041,58 +1797,47 @@ footer {
   ======================================================= */
 
   .lesson.current {
+
     transform:
       none;
   }
 
 
   /* =======================================================
-     LIBER
-     MULT MAI MIC DECÂT UN CURS
+     FREE
   ======================================================= */
-
-  .time-track:has(.free) {
-
-    min-height:
-      32px;
-
-    height:
-      32px;
-
-    border-radius:
-      9px;
-  }
-
 
   .free {
 
-    min-height:
-      30px;
+    display:
+      flex;
 
-    height:
-      30px;
+    align-items:
+      center;
 
-    padding:
-      0 8px;
+    justify-content:
+      center;
 
-    font-size:
-      10px;
-  }
-
-
-  .time-track:has(.free) .free {
+    width:
+      100%;
 
     height:
       100%;
 
-    min-height:
-      0;
-
     padding:
-      0 8px;
+      0 10px;
+
+    color:
+      var(--muted-soft);
 
     font-size:
       10px;
+
+    font-style:
+      italic;
+
+    text-align:
+      center;
   }
 
 
@@ -2140,7 +1885,6 @@ footer {
 
 @media (max-width: 480px) {
 
-
   main {
 
     width:
@@ -2171,7 +1915,6 @@ footer {
 
 
   .date-box {
-
     max-width:
       130px;
   }
@@ -2189,9 +1932,7 @@ footer {
   }
 
 
-  /* =======================================================
-     NOW
-  ======================================================= */
+  /* NOW */
 
   .now-content {
     padding:
@@ -2217,9 +1958,7 @@ footer {
   }
 
 
-  /* =======================================================
-     CONTROLS
-  ======================================================= */
+  /* CONTROLS */
 
   .controls {
 
@@ -2241,11 +1980,10 @@ footer {
   }
 
 
-  /* =======================================================
-     DAY
-  ======================================================= */
+  /* DAY */
 
   .day-heading > div {
+
     gap:
       7px;
   }
@@ -2263,9 +2001,7 @@ footer {
   }
 
 
-  /* =======================================================
-     SCHEDULE
-  ======================================================= */
+  /* SCHEDULE */
 
   .time-row {
     gap:
@@ -2289,13 +2025,28 @@ footer {
   }
 
 
-  .lesson {
+  .time-track:has(.free) {
 
     min-height:
-      78px;
+      30px;
 
     height:
-      78px;
+      30px;
+  }
+
+
+  /* LESSON */
+
+  .lesson {
+
+    width:
+      calc(100% - 6px);
+
+    height:
+      76px;
+
+    min-height:
+      76px;
 
     margin:
       3px;
@@ -2308,11 +2059,21 @@ footer {
   .lesson.odd,
   .lesson.even {
 
+    height:
+      76px;
+
     min-height:
-      78px;
+      76px;
+  }
+
+
+  .lesson.all {
 
     height:
-      78px;
+      auto;
+
+    min-height:
+      76px;
   }
 
 
@@ -2334,36 +2095,13 @@ footer {
   }
 
 
-  /* =======================================================
-     FREE
-  ======================================================= */
-
-  .time-track:has(.free) {
-
-    min-height:
-      30px;
-
-    height:
-      30px;
-  }
-
-
   .free {
-
-    min-height:
-      28px;
-
-    height:
-      28px;
-
     font-size:
-      9.5px;
+      10px;
   }
 
 
-  /* =======================================================
-     FOOTER
-  ======================================================= */
+  /* FOOTER */
 
   footer {
 
@@ -2384,7 +2122,6 @@ footer {
 ========================================================= */
 
 @media (max-width: 360px) {
-
 
   .topbar {
     padding:
@@ -2422,9 +2159,7 @@ footer {
   }
 
 
-  /* =======================================================
-     CONTROLS
-  ======================================================= */
+  /* CONTROLS */
 
   .controls {
 
@@ -2446,9 +2181,7 @@ footer {
   }
 
 
-  /* =======================================================
-     DAY
-  ======================================================= */
+  /* DAY */
 
   .day-heading > div {
     gap:
@@ -2468,9 +2201,7 @@ footer {
   }
 
 
-  /* =======================================================
-     SCHEDULE
-  ======================================================= */
+  /* SCHEDULE */
 
   .time-row {
     gap:
@@ -2494,17 +2225,28 @@ footer {
   }
 
 
-  /* =======================================================
-     LESSON
-  ======================================================= */
+  .time-track:has(.free) {
+
+    min-height:
+      28px;
+
+    height:
+      28px;
+  }
+
+
+  /* LESSON */
 
   .lesson {
 
-    min-height:
-      74px;
+    width:
+      calc(100% - 6px);
 
     height:
-      74px;
+      72px;
+
+    min-height:
+      72px;
 
     margin:
       3px;
@@ -2517,11 +2259,21 @@ footer {
   .lesson.odd,
   .lesson.even {
 
+    height:
+      72px;
+
     min-height:
-      74px;
+      72px;
+  }
+
+
+  .lesson.all {
 
     height:
-      74px;
+      auto;
+
+    min-height:
+      72px;
   }
 
 
@@ -2543,49 +2295,8 @@ footer {
   }
 
 
-  /* =======================================================
-     FREE
-  ======================================================= */
-
-  .time-track:has(.free) {
-
-    min-height:
-      28px;
-
-    height:
-      28px;
-
-    border-radius:
-      8px;
-  }
-
-
   .free {
-
-    min-height:
-      26px;
-
-    height:
-      26px;
-
     font-size:
-      9px;
-  }
-
-
-  /* =======================================================
-     FOOTER
-  ======================================================= */
-
-  footer {
-
-    width:
-      calc(100% - 12px);
-
-    flex-direction:
-      column;
-
-    gap:
-      3px;
+      9.5px;
   }
 }
