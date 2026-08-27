@@ -944,249 +944,331 @@ footer {
 
 
 /* =========================================================
-   TABLET
+   MOBILE — DESIGN UNIVERSAL
 ========================================================= */
 
 @media (max-width: 700px) {
 
-  .topbar {
+  /* =======================================================
+     GENERAL
+  ======================================================= */
 
-    padding:
-      16px;
-
-    gap: 12px;
+  body {
+    font-size: 14px;
   }
-
-
-  .eyebrow {
-
-    margin-bottom: 4px;
-
-    font-size: 9px;
-
-    letter-spacing: .11em;
-  }
-
-
-  h1 {
-    font-size: 25px;
-  }
-
-
-  .date-box {
-    max-width: 145px;
-  }
-
-
-  .date-box span {
-    font-size: 10px;
-  }
-
-
-  .date-box strong {
-    font-size: 11.5px;
-  }
-
 
   main {
-
-    width:
-      calc(100% - 20px);
-
-    margin:
-      16px auto 40px;
+    width: calc(100% - 24px);
+    max-width: 520px;
+    margin: 12px auto 28px;
   }
 
 
-  /* NOW */
+  /* =======================================================
+     HEADER
+  ======================================================= */
 
-  .now-card {
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
 
-    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    margin-bottom: 14px;
-  }
-
-
-  .now-status {
-
-    padding:
-      11px 14px;
-  }
-
-
-  .now-content {
-
-    padding:
-      16px;
-  }
-
-
-  .now-main {
-
-    grid-template-columns:
-      1fr;
+    padding: 13px 14px;
 
     gap: 12px;
   }
 
+  .brand {
+    min-width: 0;
+  }
+
+  .eyebrow {
+    margin: 0 0 3px;
+
+    font-size: 8px;
+    letter-spacing: .1em;
+
+    white-space: nowrap;
+  }
+
+  h1 {
+    margin: 0;
+
+    font-size: 22px;
+    line-height: 1.05;
+  }
+
+  .date-box {
+    flex: 0 0 auto;
+
+    max-width: 150px;
+
+    text-align: right;
+  }
+
+  .date-box span {
+    display: block;
+
+    font-size: 9px;
+    line-height: 1.2;
+
+    white-space: nowrap;
+  }
+
+  .date-box strong {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 10px;
+    line-height: 1.2;
+
+    white-space: nowrap;
+  }
+
+
+  /* =======================================================
+     NOW CARD
+  ======================================================= */
+
+  .now-card {
+    margin-bottom: 12px;
+
+    border-radius: 14px;
+  }
+
+  .now-status {
+    padding: 9px 12px;
+
+    font-size: 9px;
+  }
+
+  .now-content {
+    padding: 13px;
+  }
+
+  .now-main {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+  }
 
   .now-subject {
+    margin: 2px 0 5px;
 
-    font-size: 23px;
+    font-size: 20px;
+    line-height: 1.1;
   }
-
 
   .now-meta {
-
-    font-size: 13px;
-
-    line-height: 1.65;
+    font-size: 11.5px;
+    line-height: 1.45;
   }
 
-
   .now-time {
+    margin-top: 2px;
+    padding-top: 9px;
 
-    padding-top: 10px;
-
-    border-top:
-      1px solid var(--line);
+    border-top: 1px solid var(--line);
 
     text-align: left;
   }
 
-
   .now-time strong {
-    font-size: 17px;
+    display: block;
+
+    font-size: 15px;
+  }
+
+  .now-time span {
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 10px;
   }
 
 
-  /* CONTROLS */
+  /* =======================================================
+     NAVIGARE ZI
+  ======================================================= */
 
   .controls {
+    display: grid;
 
-    margin:
-      14px 0 20px;
+    grid-template-columns: 44px minmax(0, 1fr) 44px;
+
+    gap: 7px;
+
+    margin: 12px 0 18px;
   }
-
 
   .controls button {
-
+    width: 100%;
+    min-width: 0;
     height: 42px;
-  }
 
+    padding: 0 8px;
+
+    border-radius: 11px;
+
+    font-size: 13px;
+  }
 
   .controls .today-btn {
+    min-width: 0;
 
-    min-width: 88px;
+    font-weight: 600;
   }
 
 
-  /* DAY */
+  /* =======================================================
+     ZIUA SELECTATĂ
+  ======================================================= */
 
   .day-heading {
+    display: flex;
+    flex-direction: row;
 
-    align-items: flex-start;
-
-    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
 
     gap: 10px;
 
-    margin-bottom: 12px;
-
-    padding-bottom: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 9px;
   }
 
+  .muted {
+    font-size: 10px;
+  }
 
   .day-heading h2 {
-    font-size: 23px;
-  }
+    margin: 2px 0 0;
 
+    font-size: 23px;
+    line-height: 1;
+  }
 
   .legend {
+    display: flex;
+    flex-direction: column;
 
-    gap: 12px;
+    align-items: flex-end;
 
-    font-size: 10.5px;
+    gap: 3px;
+
+    font-size: 9px;
   }
 
 
-  /* SCHEDULE */
+  /* =======================================================
+     ORAR
+  ======================================================= */
 
   .schedule {
+    display: flex;
+    flex-direction: column;
+
     gap: 6px;
   }
 
 
-  .time-row {
+  /* =======================================================
+     INTERVAL
+  ======================================================= */
 
-    grid-template-columns:
-      54px minmax(0, 1fr);
+  .time-row {
+    display: grid;
+
+    grid-template-columns: 50px minmax(0, 1fr);
 
     gap: 7px;
 
-    min-height: 112px;
+    min-height: 88px;
   }
-
 
   .time-label {
-
     padding-top: 10px;
 
-    font-size: 9.5px;
+    font-size: 8px;
+    line-height: 1.35;
 
-    line-height: 1.45;
+    text-align: right;
   }
-
 
   .time-track {
+    min-width: 0;
+    min-height: 88px;
 
-    min-height: 112px;
-
-    border-radius: 12px;
+    border-radius: 11px;
   }
 
+
+  /* =======================================================
+     CURS
+  ======================================================= */
 
   .lesson {
+    position: relative;
 
-    margin: 5px;
+    display: flex;
+    align-items: center;
 
-    padding:
-      8px 9px;
+    min-height: 100%;
 
-    border-radius: 8px;
+    margin: 4px;
+
+    padding: 9px 10px;
+
+    border-radius: 9px;
   }
 
+  .lesson:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .lesson > div {
+    min-width: 0;
+    width: 100%;
+  }
 
   .lesson-type {
-
     margin-bottom: 2px;
 
-    font-size: 8.5px;
-  }
+    font-size: 7.5px;
+    line-height: 1.1;
 
+    letter-spacing: .08em;
+  }
 
   .lesson-subject {
-
-    margin-bottom: 4px;
+    margin: 0 0 5px;
 
     font-size: 14px;
+    line-height: 1.1;
   }
-
 
   .lesson-details {
+    display: flex;
+    flex-direction: column;
 
-    display: block;
+    gap: 2px;
 
-    font-size: 10.5px;
-
-    line-height: 1.45;
+    font-size: 9.5px;
+    line-height: 1.3;
   }
 
-
   .lesson-details span {
-
     display: block;
+
+    min-width: 0;
 
     overflow: hidden;
 
@@ -1195,205 +1277,262 @@ footer {
     white-space: nowrap;
   }
 
-
   .lesson-parity {
-
-    top: 7px;
-    right: 8px;
-
-    font-size: 7.5px;
-  }
-
-
-  .free {
-
-    padding:
-      0 10px;
-
-    font-size: 11px;
-  }
-
-
-  footer {
-
-    width:
-      calc(100% - 20px);
-
-    font-size: 9.5px;
-  }
-}
-
-
-/* =========================================================
-   SMALL PHONES
-========================================================= */
-
-@media (max-width: 480px) {
-
-  .topbar {
-
-    align-items: flex-start;
-  }
-
-
-  .date-box {
-
-    text-align: right;
-
-    padding-top: 2px;
-  }
-
-
-  .date-box span {
-
-    max-width: 120px;
-
-    line-height: 1.25;
-  }
-
-
-  main {
-
-    width:
-      calc(100% - 16px);
-  }
-
-
-  .now-content {
-
-    padding:
-      14px;
-  }
-
-
-  .now-subject {
-
-    font-size: 22px;
-  }
-
-
-  .time-row {
-
-    grid-template-columns:
-      48px minmax(0, 1fr);
-
-    gap: 6px;
-
-    min-height: 108px;
-  }
-
-
-  .time-label {
-
-    font-size: 9px;
-  }
-
-
-  .time-track {
-
-    min-height: 108px;
-  }
-
-
-  .lesson {
-
-    margin: 4px;
-
-    padding:
-      8px;
-  }
-
-
-  .lesson-subject {
-
-    max-width:
-      calc(100% - 10px);
-
-    font-size: 13.5px;
-  }
-
-
-  .lesson-details {
-
-    font-size: 10px;
-  }
-
-
-  .lesson-parity {
-
     display: none;
   }
 
 
+  /* =======================================================
+     CURS ACTIV
+  ======================================================= */
+
+  .lesson.current {
+    /* păstrează stilul existent pentru current,
+       dar fără să mărească elementul pe telefon */
+    transform: none;
+  }
+
+
+  /* =======================================================
+     LIBER
+  ======================================================= */
+
+  .free {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+
+    padding: 0 10px;
+
+    font-size: 9.5px;
+
+    font-style: italic;
+  }
+
+
+  /* =======================================================
+     WEEKEND
+  ======================================================= */
+
+  .weekend-card {
+    padding: 20px 14px;
+
+    border-radius: 12px;
+
+    font-size: 12px;
+
+    text-align: center;
+  }
+
+
+  /* =======================================================
+     FOOTER
+  ======================================================= */
+
   footer {
+    width: calc(100% - 24px);
 
-    flex-direction: column;
+    margin: 0 auto 20px;
 
-    gap: 4px;
+    font-size: 8px;
   }
 }
 
 
 /* =========================================================
-   VERY SMALL PHONES
+   TELEFOANE MICI
+========================================================= */
+
+@media (max-width: 480px) {
+
+  main {
+    width: calc(100% - 18px);
+    margin-top: 9px;
+  }
+
+  .topbar {
+    padding: 11px 12px;
+  }
+
+  .eyebrow {
+    font-size: 7px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .date-box {
+    max-width: 130px;
+  }
+
+  .date-box span {
+    font-size: 8px;
+  }
+
+  .date-box strong {
+    font-size: 9.5px;
+  }
+
+
+  /* NOW */
+
+  .now-content {
+    padding: 11px;
+  }
+
+  .now-subject {
+    font-size: 19px;
+  }
+
+  .now-meta {
+    font-size: 10.5px;
+  }
+
+  .now-time strong {
+    font-size: 14px;
+  }
+
+
+  /* CONTROLS */
+
+  .controls {
+    grid-template-columns: 42px minmax(0, 1fr) 42px;
+    gap: 6px;
+  }
+
+  .controls button {
+    height: 40px;
+
+    font-size: 12px;
+  }
+
+
+  /* DAY */
+
+  .day-heading h2 {
+    font-size: 21px;
+  }
+
+  .legend {
+    font-size: 8px;
+  }
+
+
+  /* SCHEDULE */
+
+  .time-row {
+    grid-template-columns: 44px minmax(0, 1fr);
+
+    gap: 6px;
+
+    min-height: 84px;
+  }
+
+  .time-track {
+    min-height: 84px;
+  }
+
+  .time-label {
+    padding-top: 8px;
+
+    font-size: 7.5px;
+  }
+
+  .lesson {
+    margin: 3px;
+
+    padding: 8px 9px;
+  }
+
+  .lesson-subject {
+    font-size: 13px;
+  }
+
+  .lesson-details {
+    font-size: 9px;
+  }
+
+  .free {
+    font-size: 9px;
+  }
+
+  footer {
+    width: calc(100% - 18px);
+
+    flex-direction: column;
+
+    gap: 3px;
+  }
+}
+
+
+/* =========================================================
+   TELEFOANE FOARTE MICI
 ========================================================= */
 
 @media (max-width: 360px) {
 
   .topbar {
-
-    padding:
-      13px 12px;
+    padding: 10px;
   }
-
 
   h1 {
-    font-size: 23px;
+    font-size: 19px;
   }
 
-
-  .eyebrow {
-    font-size: 8px;
+  .date-box {
+    max-width: 110px;
   }
-
 
   .date-box span {
+    font-size: 7.5px;
+  }
+
+  .date-box strong {
     font-size: 9px;
   }
 
-
-  .date-box strong {
-    font-size: 10.5px;
+  main {
+    width: calc(100% - 12px);
   }
-
 
   .controls {
-    gap: 7px;
+    grid-template-columns: 40px minmax(0, 1fr) 40px;
+    gap: 5px;
   }
-
 
   .controls button {
-
-    padding:
-      0 12px;
-
-    min-width: 38px;
+    height: 39px;
+    padding: 0 5px;
   }
-
-
-  .controls .today-btn {
-    min-width: 80px;
-  }
-
 
   .time-row {
+    grid-template-columns: 41px minmax(0, 1fr);
+    gap: 5px;
 
-    grid-template-columns:
-      44px minmax(0, 1fr);
+    min-height: 80px;
   }
 
+  .time-track {
+    min-height: 80px;
+  }
 
   .time-label {
+    font-size: 7px;
+  }
+
+  .lesson {
+    margin: 3px;
+    padding: 7px 8px;
+  }
+
+  .lesson-subject {
+    font-size: 12px;
+  }
+
+  .lesson-details {
     font-size: 8.5px;
   }
 }
