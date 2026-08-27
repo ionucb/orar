@@ -11,6 +11,17 @@ const SCHEDULE = [
   {
     day: 1,
     start: "09:45",
+    end: "11:15",
+    subject: "IoT",
+    type: "Lab",
+    teacher: "Litra D.",
+    room: "A01",
+    parity: "all"
+  },
+
+  {
+    day: 1,
+    start: "11:30",
     end: "13:00",
     subject: "IoT",
     type: "Lab",
