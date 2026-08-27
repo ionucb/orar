@@ -1,6 +1,11 @@
 const SEMESTER_START = new Date(2026, 8, 1); // 1 septembrie 2026
 const FIRST_WEEK_PARITY = "odd";
 
+// Completează aici denumirile complete ale disciplinelor, dacă vrei să
+// apară ca tooltip la trecerea cu mouse-ul peste numele scurt.
+// Ex: IoT: "Internet of Things"
+const SUBJECT_NAMES = {};
+
 let selectedDate = new Date();
 selectedDate.setHours(12, 0, 0, 0);
 
@@ -99,12 +104,15 @@ function lessonHTML(item, current = false) {
     item.parity === "odd" ? "Impară" :
     item.parity === "even" ? "Pară" : "Toate săptămânile";
 
+  const fullName = SUBJECT_NAMES[item.subject];
+  const titleAttr = fullName ? ` title="${fullName}"` : "";
+
   return `
     <article class="lesson ${item.parity} ${current ? "current" : ""}">
       <span class="lesson-parity">${parityLabel}</span>
       <div>
         <div class="lesson-type">${item.type}</div>
-        <h3 class="lesson-subject">${item.subject}</h3>
+        <h3 class="lesson-subject"${titleAttr}>${item.subject}</h3>
         <div class="lesson-details">
           <span>👨‍🏫 ${item.teacher}</span>
           <span>📍 Cabinet ${item.room}</span>
@@ -194,13 +202,15 @@ function renderNow() {
         Până atunci, orarul este pregătit pentru tine.
       </div>
     `;
+    document.getElementById("nowProgress").style.display = "none";
     return;
   }
 
   const day = getDayNumber(now);
   if (day > 5) {
     status.textContent = "WEEKEND";
-    content.innerHTML = `<div class="now-empty">Nu ai cursuri configurate astăzi.</div>`;
+    content.innerHTML = `<div class="now-empty">Nu ai cursuri configurate astăzi. 🌤️</div>`;
+    document.getElementById("nowProgress").style.display = "none";
     return;
   }
 
@@ -220,6 +230,12 @@ function renderNow() {
     .sort((a, b) => parseTime(a.start) - parseTime(b.start))[0];
 
   if (active) {
+    const startMin = parseTime(active.start);
+    const endMin = parseTime(active.end);
+    const pct = Math.min(100, Math.max(0,
+      ((minutesNow(now) - startMin) / (endMin - startMin)) * 100
+    ));
+
     status.textContent = "ACUM";
     content.innerHTML = `
       <div class="now-main">
@@ -237,8 +253,13 @@ function renderNow() {
         </div>
       </div>
     `;
+    const fill = document.getElementById("nowProgressFill");
+    if (fill) fill.style.width = `${pct.toFixed(1)}%`;
+    document.getElementById("nowProgress").style.display = "block";
     return;
   }
+
+  document.getElementById("nowProgress").style.display = "none";
 
   if (upcoming) {
     status.textContent = "URMEAZĂ";
@@ -271,20 +292,29 @@ function render() {
   renderNow();
 }
 
-document.getElementById("prevDay").addEventListener("click", () => {
-  selectedDate.setDate(selectedDate.getDate() - 1);
+function stepDay(delta) {
+  selectedDate.setDate(selectedDate.getDate() + delta);
+  // sare peste weekend, ca navigarea zi-cu-zi să rămână utilă
+  while (getDayNumber(selectedDate) > 5) {
+    selectedDate.setDate(selectedDate.getDate() + delta);
+  }
   render();
-});
+}
 
-document.getElementById("nextDay").addEventListener("click", () => {
-  selectedDate.setDate(selectedDate.getDate() + 1);
-  render();
-});
+document.getElementById("prevDay").addEventListener("click", () => stepDay(-1));
+document.getElementById("nextDay").addEventListener("click", () => stepDay(1));
 
 document.getElementById("todayBtn").addEventListener("click", () => {
   selectedDate = new Date();
   selectedDate.setHours(12, 0, 0, 0);
   render();
+});
+
+// navigare cu tastatura (săgeți stânga/dreapta), doar când nu se scrie într-un câmp
+document.addEventListener("keydown", (e) => {
+  if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
+  if (e.key === "ArrowLeft") stepDay(-1);
+  if (e.key === "ArrowRight") stepDay(1);
 });
 
 render();

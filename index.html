@@ -21,13 +21,16 @@
   </header>
 
   <main>
-    <section class="now-card" id="nowCard">
+    <section class="now-card" id="nowCard" aria-live="polite">
       <div class="now-status">
         <span class="pulse"></span>
         <span id="nowStatus">SE ÎNCARCĂ...</span>
       </div>
       <div class="now-content" id="nowContent">
         <div class="now-empty">Se verifică orarul...</div>
+      </div>
+      <div class="now-progress" id="nowProgress" style="display:none">
+        <div class="now-progress-fill" id="nowProgressFill" style="width:0%"></div>
       </div>
     </section>
 
