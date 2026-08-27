@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="Orarul universitar TI 232">
+  <title>Orar TI 232</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">TI 232 · Semestrul VII</p>
+      <h1>Orarul meu</h1>
+    </div>
+    <div class="date-box">
+      <span id="todayLabel">—</span>
+      <strong id="weekLabel">—</strong>
+    </div>
+  </header>
+
+  <main>
+    <section class="now-card" id="nowCard">
+      <div class="now-status">
+        <span class="pulse"></span>
+        <span id="nowStatus">SE ÎNCARCĂ...</span>
+      </div>
+      <div class="now-content" id="nowContent">
+        <div class="now-empty">Se verifică orarul...</div>
+      </div>
+    </section>
+
+    <section class="controls">
+      <button id="prevDay" aria-label="Ziua precedentă">←</button>
+      <button id="todayBtn" class="today-btn">Astăzi</button>
+      <button id="nextDay" aria-label="Ziua următoare">→</button>
+    </section>
+
+    <section class="day-heading">
+      <div>
+        <span class="muted" id="selectedDate">—</span>
+        <h2 id="selectedDay">—</h2>
+      </div>
+      <div class="legend">
+        <span><i class="dot odd"></i> impară</span>
+        <span><i class="dot even"></i> pară</span>
+      </div>
+    </section>
+
+    <section class="schedule" id="schedule"></section>
+  </main>
+
+  <footer>
+    <span>TI 232 · Orar universitar</span>
+    <span>Actualizare automată</span>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
