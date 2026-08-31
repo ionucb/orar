@@ -46,7 +46,7 @@ const SCHEDULE = [
     start: "13:30",
     end: "15:00",
     subject: "PECPIT",
-    type: "Curs",
+    type: "Seminar",
     teacher: "Duca L.",
     room: "630",
     parity: "even"
@@ -111,7 +111,7 @@ const SCHEDULE = [
     start: "13:30",
     end: "15:00",
     subject: "PSI",
-    type: "Curs",
+    type: "Seminar",
     teacher: "Secrieru A.",
     room: "624",
     parity: "odd"
@@ -122,7 +122,7 @@ const SCHEDULE = [
     start: "13:30",
     end: "15:00",
     subject: "ASCS",
-    type: "Curs",
+    type: "Seminar",
     teacher: "Plămădeală C.",
     room: "624",
     parity: "even"
