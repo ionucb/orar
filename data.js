@@ -16,7 +16,7 @@ const SCHEDULE = [
     type: "Lab",
     teacher: "Litra D.",
     room: "A01",
-    parity: "all"
+    parity: "even"
   },
 
   {
@@ -27,7 +27,7 @@ const SCHEDULE = [
     type: "Lab",
     teacher: "Litra D.",
     room: "A01",
-    parity: "all"
+    parity: "even"
   },
 
   {
@@ -59,7 +59,7 @@ const SCHEDULE = [
     subject: "ASCS",
     type: "Curs",
     teacher: "Catruc M.",
-    room: "6-2",
+    room: "3-3",
     parity: "all"
   },
 
@@ -97,7 +97,7 @@ const SCHEDULE = [
     subject: "ARC",
     type: "Seminar",
     teacher: "Bodoga C.",
-    room: "512",
+    room: "524",
     parity: "all"
   },
 
@@ -135,7 +135,7 @@ const SCHEDULE = [
     subject: "PSI",
     type: "Curs",
     teacher: "Chirev P.",
-    room: "6-2",
+    room: "3-3",
     parity: "all"
   },
 
@@ -146,7 +146,7 @@ const SCHEDULE = [
     subject: "PAM",
     type: "Curs",
     teacher: "Barbaroș V.",
-    room: "6-2",
+    room: "3-3",
     parity: "all"
   },
 
@@ -194,7 +194,7 @@ const SCHEDULE = [
     end: "18:30",
     subject: "PAD",
     type: "Seminar",
-    teacher: "Bîtcă E.",
+    teacher: "Bîrcă F.",
     room: "513",
     parity: "all"
   },
@@ -211,7 +211,7 @@ const SCHEDULE = [
     subject: "PAM",
     type: "Seminar",
     teacher: "Buza D.",
-    room: "513",
+    room: "201",
     parity: "all"
   },
 
@@ -222,7 +222,7 @@ const SCHEDULE = [
     subject: "ARC",
     type: "Curs",
     teacher: "Bolun I.",
-    room: "6-2",
+    room: "3-3",
     parity: "all"
   },
 
@@ -233,7 +233,7 @@ const SCHEDULE = [
     subject: "IoT",
     type: "Curs",
     teacher: "Bragarenco A.",
-    room: "6-2",
+    room: "3-3",
     parity: "all"
   }
 
