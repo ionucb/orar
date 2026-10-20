@@ -112,7 +112,7 @@ const SCHEDULE = [
     end: "15:00",
     subject: "PSI",
     type: "Seminar",
-    teacher: "Secrieru A.",
+    teacher: "Duca L.",
     room: "624",
     parity: "odd"
   },
